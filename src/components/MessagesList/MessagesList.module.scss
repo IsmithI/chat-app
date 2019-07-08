@@ -1,0 +1,19 @@
+.container {
+	background-color: #fff;
+	border-top-left-radius: 28px;
+	border-top-right-radius: 28px;
+	
+	min-height: 100%;
+	width: 100%;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	flex-grow: 1;
+	z-index: 99;
+}
+
+.messagesList {
+	list-style: none;
+	margin: 0;
+}

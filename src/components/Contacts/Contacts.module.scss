@@ -1,0 +1,23 @@
+.root {
+	position: relative;
+	background-color: rgb(126, 38, 53);
+	border-top-left-radius: 28px;
+	border-top-right-radius: 28px;
+
+	&:after {
+		position: absolute;
+		content: '';
+		display: block;
+		background-color: rgb(126, 38, 53);
+		height: 64px;
+		width: 100%;
+	}
+}
+
+.title {
+	padding: 0.5em;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	color: #fff;
+}

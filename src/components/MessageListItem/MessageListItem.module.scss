@@ -1,0 +1,29 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+	padding: 1em 0;
+
+	border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	flex-grow: 1;
+
+	padding-left: 0.7em;
+}
+
+.username {
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.message {
+	padding: 0.5em 0 0;
+	color: gray;
+	font-size: 14px;
+}
