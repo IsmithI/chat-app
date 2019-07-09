@@ -2,7 +2,6 @@
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	
-	background-color: rgb(197, 103, 119);
-	min-height: 100vh;
+	flex-grow: 1;
+	overflow: hidden;
 }

@@ -1,0 +1,15 @@
+$step: 50;
+
+@mixin transition {
+	transition: transform 0.3s ease-in-out;
+}
+
+.slide-left {
+	@include transition;
+	transform: translateX(100vw);
+
+	&.in {
+		transform: translateX(0);
+	}
+}
+

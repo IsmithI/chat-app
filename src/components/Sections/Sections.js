@@ -4,8 +4,8 @@ import styles from './Sections.module.scss';
 export function Sections (props) {
 	
 	return (
-		<main className={styles.root}>
+		<div className={styles.root}>
 			{props.children}
-		</main>
+		</div>
 	)
 }

@@ -6,7 +6,7 @@ class ChatsStore {
 	chats = [];
 
 	loadChatsShort = () => {
-		api.get("/chats/short").then(this.setChats);
+		return api.get("/chats/short").then(this.setChats);
 	};
 
 	setChats = chats => {

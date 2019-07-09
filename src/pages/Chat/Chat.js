@@ -1,15 +1,15 @@
 import React from "react";
-import { BottomBar, MessagesList, Sections, Header, Contacts } from "components";
+import { BottomBar, Container, MessagesList, Sections, Header, Contacts } from "components";
 
 export function Chat() {
 	return (
-		<>
+		<Container>
+			<Header />
 			<Sections>
-				<Header/>
-				<Contacts/>
+				<Contacts />
 				<MessagesList />
 			</Sections>
 			<BottomBar />
-		</>
+		</Container>
 	);
 }
