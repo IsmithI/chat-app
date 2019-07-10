@@ -1,4 +1,5 @@
 .container {
+	overflow-y: auto;
 	background-color: #fff;
 	border-top-left-radius: 28px;
 	border-top-right-radius: 28px;
@@ -11,6 +12,8 @@
 
 	flex-grow: 1;
 	z-index: 99;
+
+	padding-bottom: 100px;
 }
 
 .messagesList {
