@@ -12,4 +12,4 @@ class MainStore {
 	}
 }
 
-export const mainStore = createContext(new MainStore());
+export default createContext(new MainStore());

@@ -1,18 +1,40 @@
 import React from "react";
 import styles from "./Contacts.module.scss";
-import cn from 'classnames';
+import cn from "classnames";
+import ContactsStore from "stores/ContactsStore";
+import { useContext, useEffect } from "react";
+import { Favorites } from "./Favorites/Favorites";
 
 export function Contacts(props) {
-	const classes = cn(styles.title, {
+	const containerClasses = cn(styles.container, {
 		[styles.hidden]: !props.isOpen
-	})
+	});
+
+	const contactsStore = useContext(ContactsStore);
+
+	useEffect(() => {
+		contactsStore.loadContacts();
+	}, [contactsStore]);
+
 	return (
-		<section className={styles.root}>
-			<div className={classes}>
-				<div>Recent</div>
-				<div>Favorite</div>
-				<div>Newest</div>
+		<>
+			<div className={styles.rippleContainer} onClick={props.onOpen}>
+				<div className={styles.ripple} />
 			</div>
-		</section>
+			<div className={containerClasses}>
+				<Title />
+				<Favorites isOpen={props.isOpen}/>
+			</div>
+		</>
+	);
+}
+
+function Title() {
+	return (
+		<div className={styles.title}>
+			<div>Recent</div>
+			<div>Favorite</div>
+			<div>Newest</div>
+		</div>
 	);
 }

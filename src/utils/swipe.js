@@ -8,8 +8,8 @@ export function useSwipeOn(element, breakpoint) {
 		const pageY = e.touches[0].screenY;
 
 		setCursor({
-			start: pageY - element.current.offsetTop,
-			offset: pageY - element.current.offsetTop
+			start: pageY,
+			offset: pageY
 		});
 
 		setDragging(true);
@@ -20,7 +20,7 @@ export function useSwipeOn(element, breakpoint) {
 
 		setCursor(prev => ({
 			...prev,
-			offset: pageY - element.current.offsetTop
+			offset: pageY
 		}));
 	};
 
