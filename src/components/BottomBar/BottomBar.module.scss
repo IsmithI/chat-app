@@ -20,5 +20,11 @@
 }
 
 .item {
-	padding: 1em;
+	padding: 0.5em;
+	font-size: 24px;
+	color: rgb(87, 87, 87);
+
+	&.active {
+		color: #c56777;
+	}
 }
