@@ -18,8 +18,8 @@ export function Contacts(props) {
 
 	return (
 		<>
-			<div className={styles.rippleContainer} onClick={props.onOpen}>
-				<div className={styles.ripple} />
+			<div className={styles.rippleContainer}>
+				<div className={styles.ripple} onClick={props.onOpen}/>
 			</div>
 			<div className={containerClasses}>
 				<Title />
