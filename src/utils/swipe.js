@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function useSwipeOn(element, breakpoint) {
+export function useSwipeOn(element, listener) {
 	const [dragging, setDragging] = useState(false);
 	const [cursor, setCursor] = useState({ start: 0, offset: 0 });
 
@@ -28,8 +28,8 @@ export function useSwipeOn(element, breakpoint) {
 		setDragging(false);
 		setCursor({
 			start: 0,
-			offset: 0,
-		})
+			offset: 0
+		});
 	};
 
 	useEffect(() => {
@@ -50,4 +50,16 @@ export function useSwipeOn(element, breakpoint) {
 		dragging,
 		res: cursor.offset - cursor.start
 	};
+}
+
+export function useGestures(el, listener, threshold = 0) {
+	const { dragging, res } = useSwipeOn(el);
+
+	if (dragging) {
+		if (listener.onSwipeUp && res + threshold < 0) listener.onSwipeUp();
+
+		if (listener.onSwipeDown && res - threshold > 0) listener.onSwipeDown();
+	}
+
+	return [res, dragging];
 }
