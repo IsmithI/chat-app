@@ -1,3 +1,6 @@
+@import "../../styles/colors";
+@import "../../styles/shapes";
+
 .container {
 	display: flex;
 	flex-direction: column;
@@ -9,7 +12,7 @@
 }
 
 .title {
-	padding: 1.5em 0;
+	padding: spacing(2) 0;
 	width: 100%;
 	display: flex;
 	flex-wrap: nowrap;
@@ -25,9 +28,9 @@
 
 .rippleContainer {
 	position: relative;
-	background-color: rgb(126, 38, 53);
-	border-top-left-radius: 28px;
-	border-top-right-radius: 28px;
+	background-color: $primaryDark;
+	border-top-left-radius: $radiusLarge;
+	border-top-right-radius: $radiusLarge;
 
 	display: flex;
 	justify-content: center;
@@ -36,7 +39,7 @@
 		position: absolute;
 		content: '';
 		display: block;
-		background-color: rgb(126, 38, 53);
+		background-color: $primaryDark;
 		width: 100%;
 		height: 200px;
 		left: 0;
@@ -45,9 +48,9 @@
 }
 
 .ripple {
-	margin: 0.5em;
+	margin: spacing(1);
 	width: 64px;
 	height: 8px;
-	background-color: rgba(201, 201, 201, 0.7);
+	background-color: rgba($gray, 0.7);
 	border-radius: 4px;
 }

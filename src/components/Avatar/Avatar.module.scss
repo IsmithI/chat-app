@@ -1,5 +1,8 @@
+@import "../../styles/colors";
+@import "../../styles/shapes";
+
 .avatar {
-	$size: 54px;
+	$size: spacing(4);
 
 	min-width: $size;
 	max-width: $size;
@@ -13,15 +16,15 @@
 	align-content: center;
 	align-items: center;
 
-	background-color: rgb(209, 209, 209);
-	border-radius: 20px;
+	background-color: $gray;
+	border-radius: $radius;
 
 	&.small {
-		$size: 28px;
+		$size: spacing(2);
 		min-width: $size;
 		max-width: $size;
 		min-height: $size;
 		max-height: $size;
-		border-radius: 8px;
+		border-radius: $radiusSmall;
 	}
 }

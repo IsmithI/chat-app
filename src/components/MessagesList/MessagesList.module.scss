@@ -1,8 +1,10 @@
+@import "../../styles/shapes";
+
 .container {
 	overflow-y: auto;
 	background-color: #fff;
-	border-top-left-radius: 28px;
-	border-top-right-radius: 28px;
+	border-top-left-radius: $radiusLarge;
+	border-top-right-radius: $radiusLarge;
 	
 	min-height: 100%;
 	width: 100%;
@@ -19,5 +21,5 @@
 .messagesList {
 	list-style: none;
 	margin: 0;
-	padding-left: 28px;
+	padding-left: spacing(2);
 }

@@ -1,9 +1,12 @@
+@import "../../styles/colors";
+@import "../../styles/shapes";
+
 .root {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
-	align-items: flex-start;
-	padding: 2em;
+	align-items: center;
+	padding: spacing(2);
 }
 
 .title {
@@ -13,14 +16,14 @@
 }
 
 .icon {
-	$size: 28px;
+	$size: spacing(2);
 	min-width: $size;
 	max-width: $size;
 	min-height: $size;
 	max-height: $size;
-	border-radius: 8px;
+	border-radius: $radiusSmall;
 
-	background-color: rgba($color: #7e2635, $alpha: 0.7);
+	background-color: rgba($primaryDark, $alpha: 0.7);
 	color: #fff;
 
 	font-size: 12px;

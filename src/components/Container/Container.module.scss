@@ -1,8 +1,10 @@
+@import "../../styles/colors";
+
 .root {
 	display: flex;
 	flex-direction: column;
 	
-	background-color: rgb(197, 103, 119);
+	background-color: $primaryLight;
 	min-height: 100vh;
 	max-height: 100vh;
 }

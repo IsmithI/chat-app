@@ -1,0 +1,9 @@
+
+
+@function spacing($val: 1) {
+	@return $val + rem;
+}
+
+$radius: spacing(1);
+$radiusSmall: spacing(0.5);
+$radiusLarge: spacing(2);

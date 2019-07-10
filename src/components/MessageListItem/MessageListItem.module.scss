@@ -1,9 +1,12 @@
+@import "../../styles/colors";
+@import "../../styles/shapes";
+
 .container {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	
-	padding: 1em 0;
+	padding: spacing(1) 0;
 
 	border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
 }
@@ -14,7 +17,7 @@
 	flex-wrap: nowrap;
 	flex-grow: 1;
 
-	padding-left: 0.7em;
+	padding-left: spacing(1);
 }
 
 .username {
@@ -23,7 +26,7 @@
 }
 
 .message {
-	padding: 0.5em 0 0;
-	color: gray;
-	font-size: 14px;
+	padding: spacing(1) 0 0;
+	color: $darkGrey;
+	font-size: 16px;
 }
