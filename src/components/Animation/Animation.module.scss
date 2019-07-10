@@ -1,11 +1,11 @@
 $step: 50;
 
-@mixin transition {
+@mixin _transition {
 	transition: transform 0.3s ease-in-out;
 }
 
 .slide-left {
-	@include transition;
+	@include _transition;
 	transform: translateX(100vw);
 
 	&.in {

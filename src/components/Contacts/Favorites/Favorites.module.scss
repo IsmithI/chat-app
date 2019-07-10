@@ -1,5 +1,6 @@
 @import "../../../styles/shapes";
 @import "../../../styles/colors";
+@import "../../../styles/animations";
 
 .root {
 	position: relative;
@@ -22,7 +23,8 @@
 	}
 
 	max-height: 200px;
-	transition: all 0.3s ease-out;
+	
+	@include transition();
 }
 
 .contacts {

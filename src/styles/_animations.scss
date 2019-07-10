@@ -1,0 +1,8 @@
+
+@function easing() {
+	@return cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@mixin transition($dur: 0.5s, $el: all) {
+	transition: $el $dur easing();
+}
