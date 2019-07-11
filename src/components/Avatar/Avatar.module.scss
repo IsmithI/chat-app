@@ -19,6 +19,8 @@
 	background-color: $gray;
 	border-radius: $radius;
 
+	font-size: 20px;
+
 	&.small {
 		$size: spacing(2);
 		min-width: $size;
@@ -26,5 +28,7 @@
 		min-height: $size;
 		max-height: $size;
 		border-radius: $radiusSmall;
+
+		font-size: 12px;
 	}
 }

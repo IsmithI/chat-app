@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar component renders successfully 1`] = `
+<div
+  className="avatar"
+>
+  <span
+    className="letter"
+  >
+    AB
+  </span>
+</div>
+`;

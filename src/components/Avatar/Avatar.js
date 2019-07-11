@@ -8,8 +8,10 @@ export function Avatar (props) {
 
 	return (
 		<div className={classes.join(' ')}>
-			{props.src && (
+			{props.src ? (
 				<img src={props.src} alt="avatar"/>
+			) : props.letter && (
+				<span className={styles.letter}>{props.letter}</span>
 			)}
 		</div>
 	)
