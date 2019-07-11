@@ -45,7 +45,6 @@
 	width: spacing(4);
 
 	background-color: $primaryDark;
-	color: #fff;
 
 	text-align: center;
 
@@ -55,7 +54,8 @@
 
 	>h5 {
 		margin: 0;
-		margin-top: spacing(1)
+		margin-top: spacing(1);
+		color: #fff;
 	}
 }
 

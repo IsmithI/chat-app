@@ -4,6 +4,7 @@ import ContactsStore from 'stores/ContactsStore';
 import styles from './Favorites.module.scss';
 import cn from 'classnames';
 import { Avatar } from 'components';
+import { getAvatarLetters } from 'utils/string';
 
 export function Favorites(props) {
 	const classes = cn(styles.root, {
@@ -16,7 +17,7 @@ export function Favorites(props) {
 			<div className={styles.contacts}>
 			{contacts.map(contact => (
 				<div key={contact.id} className={styles.contactContainer}>
-					<Avatar/>
+					<Avatar letter={getAvatarLetters(contact)}/>
 					<h5>{contact.firstName}</h5>
 				</div>
 			))}

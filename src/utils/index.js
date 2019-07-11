@@ -1,2 +1,5 @@
 export * from './api'
 export * from './swipe'
+export * from './date'
+export * from './math'
+export * from './string'

@@ -28,11 +28,13 @@
 }
 
 .username {
+	margin: 0;
 	font-weight: 500;
 	font-size: 18px;
 }
 
 .message {
+	margin: 0;
 	padding: spacing(1) 0 0;
 	color: $darkGrey;
 	font-size: 16px;
@@ -53,6 +55,7 @@
 }
 
 .date {
+	margin: 0;
 	padding: 0 spacing(1);
 	color: $darkGrey;
 }
