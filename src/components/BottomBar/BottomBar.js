@@ -1,23 +1,35 @@
 import React from "react";
+import { useState } from "react";
 import styles from "./BottomBar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faCommentDots, faUserFriends, faCog } from "@fortawesome/free-solid-svg-icons";
+import items from "./items";
+import cn from "classnames";
 
 export function BottomBar() {
+	const [activeTab, setActiveTab] = useState("chats");
+
 	return (
 		<section className={styles.container}>
-			<div className={styles.item}>
-				<FontAwesomeIcon icon={faBars} />
-			</div>
-			<div className={styles.item + ' ' + styles.active}>
-				<FontAwesomeIcon icon={faCommentDots} />
-			</div>
-			<div className={styles.item}>
-				<FontAwesomeIcon icon={faUserFriends} />
-			</div>
-			<div className={styles.item}>
-				<FontAwesomeIcon icon={faCog} />
-			</div>
+			{items.map(item => (
+				<Item
+					key={item.label}
+					{...item}
+					onClick={setActiveTab}
+					isActive={item.label === activeTab}
+				/>
+			))}
 		</section>
+	);
+}
+
+function Item({ label, icon, onClick, isActive }) {
+	const classes = cn(styles.item, {
+		[styles.active]: isActive
+	});
+
+	return (
+		<div key={label} onClick={() => onClick(label)} className={classes}>
+			<FontAwesomeIcon icon={icon} />
+		</div>
 	);
 }
