@@ -50,10 +50,10 @@ export function Contacts(props) {
 
 function Title() {
 	return (
-		<div className={styles.title}>
+		<nav className={styles.title}>
 			<div>Recent</div>
 			<div>Favorite</div>
 			<div>Newest</div>
-		</div>
+		</nav>
 	);
 }

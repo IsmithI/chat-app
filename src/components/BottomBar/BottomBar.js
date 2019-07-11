@@ -9,7 +9,7 @@ export function BottomBar() {
 	const [activeTab, setActiveTab] = useState("chats");
 
 	return (
-		<section className={styles.container}>
+		<nav className={styles.container}>
 			{items.map(item => (
 				<Item
 					key={item.label}
@@ -18,7 +18,7 @@ export function BottomBar() {
 					isActive={item.label === activeTab}
 				/>
 			))}
-		</section>
+		</nav>
 	);
 }
 
