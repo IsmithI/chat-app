@@ -4,7 +4,7 @@
 @import "../../styles/animations";
 
 .container {
-	height: 100px;
+	height: spacing(6);
 	width: 100vw;
 	position: fixed;
 	bottom: 0;
@@ -20,7 +20,8 @@
 
 	@include shadow();
 	
-	border-radius: $radiusLarge;
+	border-top-left-radius: $radiusLarge;
+	border-top-right-radius: $radiusLarge;
 	background-color: #fff;
 
 	z-index: 999;

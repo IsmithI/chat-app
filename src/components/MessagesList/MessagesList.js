@@ -10,6 +10,9 @@ import cn from "classnames";
 function MessagesListBase({ onOpen, isOpen }) {
 	const section = useRef();
 	const store = useContext(ChatsStore);
+	const classes = cn(styles.container, {
+		[styles.scrolling]: isOpen
+	});
 
 	useEffect(() => {
 		store.loadChatsShort();
@@ -18,16 +21,10 @@ function MessagesListBase({ onOpen, isOpen }) {
 	useGestures(
 		section,
 		{
-			onSwipeUp: () => {
-				if (isOpen) onOpen();
-			}
+			onSwipeUp: () => isOpen && onOpen()
 		},
 		25
 	);
-
-	const classes = cn(styles.container, {
-		[styles.scrolling]: isOpen
-	});
 
 	return (
 		<section ref={section} className={classes}>

@@ -1,7 +1,7 @@
 
 
 @function spacing($val: 1) {
-	@return $val + rem;
+	@return $val * 0.75 + rem;
 }
 
 $radius: spacing(1);
