@@ -1,6 +1,7 @@
 @import "../../../styles/shapes";
 @import "../../../styles/colors";
 @import "../../../styles/animations";
+@import "../../../styles/shadows";
 
 .root {
 	position: relative;
@@ -25,6 +26,7 @@
 	max-height: 200px;
 	
 	@include transition();
+	@include shadow('up');
 }
 
 .contacts {

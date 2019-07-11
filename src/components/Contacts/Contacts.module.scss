@@ -1,5 +1,6 @@
 @import "../../styles/colors";
 @import "../../styles/shapes";
+@import "../../styles/shadows";
 @import "../../styles/animations";
 
 .container {
@@ -13,7 +14,7 @@
 }
 
 .title {
-	padding: spacing(2) 0;
+	padding: spacing(1) 0;
 	width: 100%;
 	display: flex;
 	flex-wrap: nowrap;
@@ -36,6 +37,8 @@
 	display: flex;
 	justify-content: center;
 
+	@include shadow('up');
+
 	&:after {
 		position: absolute;
 		content: '';
@@ -50,7 +53,7 @@
 
 .ripple {
 	margin: spacing(1);
-	width: 64px;
+	width: spacing(4);
 	height: 8px;
 	background-color: rgba($gray, 0.7);
 	border-radius: 4px;

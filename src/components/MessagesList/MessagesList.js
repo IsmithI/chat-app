@@ -5,7 +5,7 @@ import ChatsStore from "stores/ChatsStore";
 import { MessagesListItem, Slide } from "components";
 import styles from "./MessagesList.module.scss";
 import { useGestures } from "utils/swipe";
-import cn from 'classnames';
+import cn from "classnames";
 
 function MessagesListBase({ onOpen, isOpen }) {
 	const section = useRef();
@@ -15,7 +15,7 @@ function MessagesListBase({ onOpen, isOpen }) {
 		store.loadChatsShort();
 	}, [store]);
 
-	const [pos, dragging] = useGestures(
+	useGestures(
 		section,
 		{
 			onSwipeUp: () => {

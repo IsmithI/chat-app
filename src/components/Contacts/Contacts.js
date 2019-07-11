@@ -30,17 +30,15 @@ export function Contacts(props) {
 		contactsStore.loadContacts();
 	}, [contactsStore]);
 
+	const style = {
+		transform: `translateY(${pos / 4}px)`,
+		transition: !dragging && `transform 0.3s ease-out`
+	};
+
 	return (
 		<>
 			<div ref={el} className={styles.rippleContainer}>
-				<div 
-					className={styles.ripple} 
-					onClick={props.onOpen}
-					style={{
-						transform: `translateY(${pos / 4}px)`,
-						transition: !dragging && `transform 0.3s ease-out`
-					}} 
-				/>
+				<div className={styles.ripple} onClick={props.onOpen} style={style} />
 			</div>
 			<div className={containerClasses}>
 				<Title />
