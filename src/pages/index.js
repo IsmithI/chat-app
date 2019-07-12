@@ -1,2 +1,2 @@
-export * from './Chat/Chat'
+export * from './ChatList/ChatList'
 export * from './Contacts/Contacts'

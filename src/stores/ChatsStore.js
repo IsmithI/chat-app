@@ -6,6 +6,15 @@ class ChatsStore {
 	chats = [];
 	favoriteContacts = [];
 
+	constructor() {
+		this.socket = new WebSocket("ws://localhost:3001/ws");
+		this.socket.onopen = () => {
+			console.log("Socket is opened! Sending test message");
+			this.socket.send("Hello, this is a test message!");
+		};
+		this.socket.onmessage = msg => console.log(msg);
+	}
+
 	loadChatsShort = () => {
 		return api.get("/chats/short").then(this.setChats);
 	};
