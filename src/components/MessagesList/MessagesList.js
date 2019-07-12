@@ -2,10 +2,11 @@ import React from "react";
 import { useContext, useEffect, useRef } from "react";
 import { observer } from "mobx-react-lite";
 import ChatsStore from "stores/ChatsStore";
-import { MessagesListItem, Slide } from "components";
+import { MessagesListItem } from "components";
 import styles from "./MessagesList.module.scss";
 import { useGestures } from "utils/swipe";
 import cn from "classnames";
+import { List } from "components/List/List";
 
 function MessagesListBase({ onOpen, isOpen }) {
 	const section = useRef();
@@ -27,15 +28,11 @@ function MessagesListBase({ onOpen, isOpen }) {
 	);
 
 	return (
-		<section ref={section} className={classes}>
-			<ul className={styles.messagesList}>
-				{store.chats.map(chat => (
-					<Slide direction="left" key={chat.id}>
-						<MessagesListItem {...chat} />
-					</Slide>
-				))}
-			</ul>
-		</section>
+		<List ref={section} className={classes}>
+			{store.chats.map(chat => (
+				<MessagesListItem key={chat.id} {...chat} />
+			))}
+		</List>
 	);
 }
 

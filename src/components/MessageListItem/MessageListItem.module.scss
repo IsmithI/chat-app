@@ -1,32 +1,6 @@
 @import "../../styles/colors";
 @import "../../styles/shapes";
 
-.container {
-	display: flex;
-	align-items: center;
-	padding: spacing(1) 0;
-
-	border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
-
-	&:first-child {
-		padding-top: 0;
-	}
-
-	&:last-child {
-		border-bottom: none;
-	}
-}
-
-.content {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	flex: 1;
-
-	padding-left: spacing(1);
-	min-width: 0;
-}
-
 .username {
 	margin: 0;
 	font-weight: 500;
