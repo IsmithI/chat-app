@@ -1,5 +1,6 @@
 @import "./shapes";
 @import "./shadows";
+@import "./colors";
 
 @mixin container() {
 	background-color: #fff;
@@ -16,4 +17,24 @@
 	padding-bottom: 100px;
 
 	@include shadow('up');
+}
+
+@mixin input() {
+	padding: spacing(1);
+
+	background-color: $primaryLight;
+	border-radius: $radiusLarge;
+
+	color: #fff;
+	font-size: 14px;
+
+	border: 3px solid rgba(#fff, 0.8);
+
+	&::placeholder {
+		color: rgba($color: $gray, $alpha: 0.8);
+	}
+
+	&:focus {
+		outline: none;
+	}
 }
