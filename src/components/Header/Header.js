@@ -3,15 +3,17 @@ import { Avatar } from 'components';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { withRouter } from 'react-router-dom';
+import { locationToString } from 'utils';
 
 
-export function Header (props) {
+export const Header = withRouter(({ location }) => {
 
 	return (
 		<section className={styles.root}>
 			<Avatar small/>
 			<div className={styles.title}>
-				Messages
+				{locationToString(location.pathname)}
 			</div>
 			<div className={styles.icon}>
 				<div>
@@ -20,4 +22,4 @@ export function Header (props) {
 			</div>
 		</section>
 	)
-}
+})

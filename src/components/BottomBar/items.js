@@ -4,17 +4,21 @@ export default [
 	{
 		label: 'menu',
 		icon: faBars,
+		path: '/home',
 	},
 	{
 		label: 'chats',
 		icon: faCommentDots,
+		path: '/',
 	},
 	{
 		label: 'contacts',
 		icon: faUserFriends,
+		path: '/contacts',
 	},
 	{
 		label: 'settings',
 		icon: faCog,
+		path: '/settings'
 	},
 ]

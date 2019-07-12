@@ -18,16 +18,16 @@ class ChatsStore {
 		this.chats = chats;
 	};
 
-	setFavoriteContacts = (contacts) => {
+	setFavoriteContacts = contacts => {
 		this.favoriteContacts = contacts;
-	}
+	};
 }
 
-export default createContext(
-	decorate(new ChatsStore(), {
-		chats: observable,
-		favoriteContacts: observable,
-		setChats: action,
-		setFavoriteContacts: action,
-	})
-);
+decorate(ChatsStore, {
+	chats: observable,
+	favoriteContacts: observable,
+	setChats: action,
+	setFavoriteContacts: action
+});
+
+export default createContext(new ChatsStore());

@@ -1,12 +1,13 @@
 import React from "react";
-import { useState } from "react";
 import styles from "./BottomBar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import items from "./items";
 import cn from "classnames";
+import { withRouter } from 'react-router-dom';
 
-export function BottomBar() {
-	const [activeTab, setActiveTab] = useState("chats");
+export const BottomBar = withRouter(({ history, location }) => {
+	const activeTab = location.pathname;
+	const link = (path) => history.push(path);
 
 	return (
 		<nav className={styles.container}>
@@ -14,21 +15,21 @@ export function BottomBar() {
 				<Item
 					key={item.label}
 					{...item}
-					onClick={setActiveTab}
-					isActive={item.label === activeTab}
+					onClick={link}
+					isActive={item.path === activeTab}
 				/>
 			))}
 		</nav>
 	);
-}
+})
 
-function Item({ label, icon, onClick, isActive }) {
+function Item({ label, icon, onClick, isActive, path }) {
 	const classes = cn(styles.item, {
 		[styles.active]: isActive
 	});
 
 	return (
-		<div key={label} onClick={() => onClick(label)} className={classes}>
+		<div key={label} onClick={() => onClick(path)} className={classes}>
 			<FontAwesomeIcon icon={icon} />
 		</div>
 	);

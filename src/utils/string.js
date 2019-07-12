@@ -7,3 +7,11 @@ export function getAvatarLetters(label) {
 
 	return getAvatarLetters(label.firstName + ' ' + label.lastName);
 }
+
+export function locationToString(location) {
+	if (location === '' || location === '/') 
+		return 'messages';
+
+	location = location.substr(1)
+	return location.replace('/', '.');
+}
